@@ -1,5 +1,5 @@
 from app.bootstrap import bootstrap
-from flask_script import Manager, Server, Shell
+from flask_script import Manager, Server
 
 app = bootstrap()
 manager = Manager(app)

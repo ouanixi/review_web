@@ -1,4 +1,4 @@
-cmd: "/home/ouanixi/Work/Honours/review_miner/venv/bin/python manage.py"
+cmd: "venv/bin/python manage.py"
 name: "runserver"
 args:
   - runserver

@@ -39,7 +39,16 @@
 			"file": "app/index/resource.py",
 			"settings":
 			{
-				"buffer_size": 496,
+				"buffer_size": 1343,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/uwsgi/uwsgi.ini",
+			"settings":
+			{
+				"buffer_size": 270,
 				"line_ending": "Unix"
 			}
 		}
@@ -179,8 +188,8 @@
 	[
 		"/home/ouanixi/Work/Honours/review_web",
 		"/home/ouanixi/Work/Honours/review_web/app",
-		"/home/ouanixi/Work/Honours/review_web/app/index",
-		"/home/ouanixi/Work/Honours/review_web/app/templates"
+		"/home/ouanixi/Work/Honours/review_web/config",
+		"/home/ouanixi/Work/Honours/review_web/config/uwsgi"
 	],
 	"file_history":
 	[
@@ -375,16 +384,16 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "app/index/resource.py",
-					"semi_transient": true,
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 496,
+						"buffer_size": 1343,
 						"regions":
 						{
 						},
@@ -397,7 +406,48 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 575.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "config/uwsgi/uwsgi.ini",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 270,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -442,7 +492,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 455.0
+		"height": 1005.0
 	},
 	"output.find_results":
 	{
