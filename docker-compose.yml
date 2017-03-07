@@ -6,9 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     expose:
-      - "8000"
-    links:
-      - postgres:postgres
+      - "80"
     volumes:
       - /usr/src/app/static
 
@@ -16,24 +14,10 @@ services:
     restart: always
     build: ./nginx/
     ports:
-      - "80:80"
+      - "5000:5000"
     volumes:
       - /www/static
     volumes_from:
       - web
     links:
       - web:web
-
-  data:
-    image: postgres:latest
-    volumes:
-      - /var/lib/postgresql
-    command: "true"
-
-  postgres:
-    restart: always
-    image: postgres:latest
-    volumes_from:
-      - data
-    ports:
-      - "5432:5432"

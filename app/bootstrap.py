@@ -9,7 +9,7 @@ def bootstrap():
     load_app_config(app)
 
     from app.api import api as api_blueprint
-    from app.index import index as index_blueprint
+    from app.index import ind as index_blueprint
 
     app.register_blueprint(api_blueprint)
     app.register_blueprint(index_blueprint)
