@@ -1,3 +1,4 @@
+"""Controller module handling requests."""
 from flask import render_template, request
 import requests
 
@@ -14,12 +15,12 @@ inf_map = {"1": "Informative",
 
 
 @ind.route('/', methods=['GET', 'POST'])
-def index():
+def _index():
     return render_template('index.html')
 
 
 @ind.route('summarise', methods=['GET', 'POST'])
-def summary():
+def _summary():
     url = "http://localhost/api/predict"
     review = request.form['text']
     data = [{"id": "0", "review": review, "rating": '5'}]
@@ -31,7 +32,7 @@ def summary():
                            intent=data.get('intent'), sentiment=data.get('sentiment'))
 
 
-def parse_response(response_json):
+def _parse_response(response_json):
     if response_json['sentences']:
         for key in response_json['sentences']:
             value = response_json['sentences'].get(key)

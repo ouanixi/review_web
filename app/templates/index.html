@@ -1,9 +1,9 @@
 {% extends "_base.html" %}
 
 {% block content %}
-
+<div class="container">
 <div class="text-center">
-  <h1>Review Summariser!</h1>
+  <h3>Try it now</h3>
 </div>
 
 <br>
@@ -18,10 +18,6 @@
 <br>
 <hr>
 
-<div>
-  {% for post in posts %}
-    <h4 class="well"><strong>{{post.text}}</strong> - <em>{{post.date_posted.strftime('%Y-%m-%d')}}</em></h4>
-  {% endfor %}
-</div>
 
+</div>
 {% endblock %}

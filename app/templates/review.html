@@ -3,14 +3,14 @@
 {% block content %}
 
     <div class="text-center">
-        <h1>Review Summary!</h1>
+        <h2>Review Summary!</h2>
     </div>
     <hr/>
 
     <div class="text-center">
         <h4 class="h4">Original Review!</h4>
     </div>
-    <div class="alert-info">
+    <div>
         {{ review }}
     </div>
     <p class="text-danger">Review overall sentiment: {{ sentiment }}</p>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="col-md-12">
-        <table class="table table-bordered">
+        <table class="table table-striped">
             <thead>
             <tr>
                 <th>Sentence</th>
@@ -30,9 +30,9 @@
             </thead>
             <tbody>
             {% for key, value in sentences.items() %}
-                <tr class="success">
+                <tr>
                     <td>{{ key }}</td>
-                    <td class="text-danger">{{ value }}</td>
+                    <td>{{ value }}</td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="col-md-12">
-        <table class="table table-bordered">
+        <table class="table table-striped">
             <thead>
             <tr>
                 <th>Sentence</th>
@@ -56,14 +56,16 @@
             </thead>
             <tbody>
             {% for key, value in intent.items() %}
-                <tr class="success">
+                <tr>
                     <td>{{ key }}</td>
-                    <td class="text-danger">{{ value }}</td>
+                    <td>{{ value }}</td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
     </div>
+
+    <a href="/" class="btn btn-info" role="button">Try another review</a>
 
 
 {% endblock %}

@@ -3,4 +3,4 @@ name: "runserver"
 args:
   - runserver
 sh: true,
-cwd: /home/ouanixi/Work/Honours/review_web/
+cwd: /home/ouanixi/Work/Github/review_web/
