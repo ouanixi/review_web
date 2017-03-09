@@ -1,14 +1,14 @@
 {% extends "_base.html" %}
 
 {% block content %}
-
+<div class="container" style="padding:10em">
     <div class="text-center">
         <h2>Review Summary!</h2>
     </div>
     <hr/>
 
     <div class="text-center">
-        <h4 class="h4">Original Review!</h4>
+        <h4 class="h4">ORIGINAL REVIEW!</h4>
     </div>
     <div>
         {{ review }}
@@ -17,11 +17,11 @@
     <hr/>
 
     <div class="text-center">
-        <h4 class="h4">Sentence Relevance!</h4>
+        <h4 class="h4">SENTENCE RELEVANCE!</h4>
     </div>
 
-    <div class="col-md-12">
-        <table class="table table-striped">
+    <div class="table-responsive">
+        <table class="table table-hover">
             <thead>
             <tr>
                 <th>Sentence</th>
@@ -32,7 +32,13 @@
             {% for key, value in sentences.items() %}
                 <tr>
                     <td>{{ key }}</td>
-                    <td>{{ value }}</td>
+                    <td>
+                        {%if value == 'Informative'%}
+                        <span class="label label-success">{{ value }}</span>
+                        {% else %}
+                        <span class="label label-danger">{{ value }}</span>
+                        {% endif%}
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -43,11 +49,11 @@
 
 
     <div class="text-center">
-        <h4 class="h4">Usert intention!</h4>
+        <h4 class="h4">USER INTENTION!</h4>
     </div>
 
-    <div class="col-md-12">
-        <table class="table table-striped">
+    <div class="table-responsive">
+        <table class="table table-hover">
             <thead>
             <tr>
                 <th>Sentence</th>
@@ -58,7 +64,17 @@
             {% for key, value in intent.items() %}
                 <tr>
                     <td>{{ key }}</td>
-                    <td>{{ value }}</td>
+                    <td>
+                        {%if value == 'Problem Discovery'%}
+                        <span class="label label-danger">{{ value }}</span>
+                        {% elif value == 'Feature Request' %}
+                        <span class="label label-warning">{{ value }}</span>
+                        {% elif value == 'Information Giving' %}
+                        <span class="label label-success">{{ value }}</span>
+                        {% else %}
+                        <span class="label label-primary">{{ value }}</span>
+                        {% endif%}
+                    </td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -67,5 +83,5 @@
 
     <a href="/" class="btn btn-info" role="button">Try another review</a>
 
-
+</div>
 {% endblock %}
