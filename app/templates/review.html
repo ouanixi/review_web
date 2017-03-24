@@ -11,6 +11,11 @@
         <h4 class="h4">ORIGINAL REVIEW!</h4>
     </div>
     <div>
+        {% for value in topics %}
+        <span class="label label-success">{{ value }}</span>
+        {% endfor %}
+    </div>
+    <div>
         {{ review }}
     </div>
     <p class="text-danger">Review overall sentiment: {{ sentiment }}</p>

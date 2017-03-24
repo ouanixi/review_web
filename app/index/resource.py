@@ -29,7 +29,8 @@ def _summary():
     data = _parse_response(data)
     return render_template('review.html', review=data.get('review'),
                            sentences=data.get('sentences'),
-                           intent=data.get('intent'), sentiment=data.get('sentiment'))
+                           intent=data.get('intent'), sentiment=data.get('sentiment'),
+                           topics=data.get('topics'))
 
 
 def _parse_response(response_json):

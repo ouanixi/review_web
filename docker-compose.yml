@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     expose:
-      - "9000"
+      - "8000"
     volumes:
       - /usr/src/app/static
 
@@ -14,7 +14,7 @@ services:
     restart: always
     build: ./nginx/
     ports:
-      - "5000:5000"
+      - "8070:8070"
     volumes:
       - /www/static
     volumes_from:
