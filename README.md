@@ -31,8 +31,8 @@ Assuming the containers are both running, navigate to your localhost with port 8
 
 Type or copy and paste a user review in the given text box and hit submit.
 
-![ ](/home/ouanixi/Work/Github/review_web/Screenshot from 2017-04-29 14-39-51.png  "review textbox")
+![ ](https://github.com/ouanixi/review_web/blob/master/Screenshot%20from%202017-04-29%2014-39-51.png "review textbox")
 
 The app should direct you to a new view where the summary of the review is displayed.
 
-![ ](/home/ouanixi/Work/Github/review_web/Screenshot from 2017-04-29 14-39-24.png  "review summary")
+![ ](https://github.com/ouanixi/review_web/blob/master/Screenshot%20from%202017-04-29%2014-39-24.png  "review summary")
