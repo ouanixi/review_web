@@ -21,7 +21,7 @@ def _index():
 
 @ind.route('summarise', methods=['GET', 'POST'])
 def _summary():
-    url = "http://localhost/api/predict"
+    url = "http://172.18.0.1/api/predict"
     review = request.form['text']
     data = [{"id": "0", "review": review, "rating": '5'}]
     response = requests.post(url, json=data)
